@@ -1,10 +1,14 @@
 package pl.szczerbaniak.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "admins")
 public class Admins {
+
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id
+    private Long id;
     private String username;
     private String password;
     private String accountType;
