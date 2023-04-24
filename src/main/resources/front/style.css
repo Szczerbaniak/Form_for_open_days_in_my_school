@@ -1,0 +1,170 @@
+/** @format */
+
+* {
+	box-sizing: border-box;
+	font-family: Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	align-items: center;
+	background: linear-gradient(120deg, #2980b9, #8e44ad);
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	width: 100%;
+}
+
+.center {
+	background: white;
+	border-radius: 10px;
+	box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+	padding: 30px;
+	position: absolute;
+	width: 410px;
+}
+
+.center h1 {
+	padding-bottom: 20px 0;
+	text-align: center;
+}
+
+.center form {
+	box-sizing: border-box;
+	padding: 0 40px;
+}
+
+form .txt_field {
+	border-bottom: 2px solid #adadad;
+	display: flex;
+	margin: 30px 0;
+	position: relative;
+}
+
+.txt_field input {
+	background: none;
+	border: none;
+	font-size: 16px;
+	height: 40px;
+	outline: none;
+	padding: 0 5px;
+	width: 100%;
+}
+
+.txt_field label {
+	color: #adadad;
+	font-size: 16px;
+	left: 5px;
+	pointer-events: none;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: 0.5s;
+}
+
+.txt_field span::before {
+	background: #2691d9;
+	content: "";
+	height: 2px;
+	left: 0;
+	position: absolute;
+	top: 40px;
+	transition: 0.5s;
+	width: 0%;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:not(:placeholder-shown) ~ label {
+	color: #2691d9;
+	top: -5px;
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:not(:placeholder-shown) ~ span::before {
+	width: 100%;
+}
+
+input[type="submit"] {
+	background: #2691d9;
+	border-radius: 25px;
+	border: 1px solid;
+	color: #e9f4fb;
+	cursor: pointer;
+	font-size: 18px;
+	font-weight: 700;
+	height: 50px;
+	outline: none;
+	width: 100%;
+}
+
+input[type="submit"]:hover {
+	border-color: #2691d9;
+	transition: 0.5s;
+}
+
+select {
+	border: none;
+	color: #000000;
+	font-size: 16px;
+}
+
+select:invalid {
+	color: #adadad;
+}
+
+span::before select:focus {
+	background: #2691d9;
+	content: "";
+	height: 2px;
+	left: 0;
+	position: absolute;
+	top: 40px;
+	transition: 0.5s;
+	width: 100%;
+}
+
+select {
+	width: 100%;
+}
+
+.add_major {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+	margin-top: -20px;
+}
+
+.add_major_button {
+	background: none;
+	border: 1px solid #adadad;
+	padding: 1px 8px;
+}
+
+.add_major_button:active {
+	background: #e9e9e9;
+}
+
+.no_pesel_button {
+	background: #2691d9;
+	border-radius: 25px;
+	border: 1px solid;
+	color: #e9f4fb;
+	cursor: pointer;
+	font-size: 18px;
+	height: 40px;
+	outline: none;
+	width: 90%;
+}
+
+.no_pesel_button:active {
+	border-color: #039aff;
+	transition: 0.1s;
+}
+
+.template {
+	display: none;
+}

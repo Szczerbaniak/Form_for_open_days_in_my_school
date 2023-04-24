@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="center">
+        <h1>Twoje dane</h1>
+        <form method="get">
+
+            <div class="txt_field">
+                <input type="text" name="name" placeholder=" " required>
+                <span></span>
+                <label>imie</label>
+            </div>
+
+            <div class="txt_field">
+                <input type="text" placeholder=" " name="secName">
+                <span></span>
+                <label>2 imie</label>
+            </div>
+
+            <div class="txt_field">
+                <input type="text" name="surname" placeholder=" " required>
+                <span></span>
+                <label>nazwisko</label>
+            </div>
+
+            <div class="txt_field pesel">
+                <input type="text" name="pesel" pattern="[0-9]{11}" placeholder=" ">
+                <span></span>
+                <label>pesel</label>
+            </div>
+
+            <div class="no_pesel">
+                <input type="button" class="no_pesel_button" value="Nie mam numeru pesel">
+            </div>
+
+            <div class="template">
+                <div class="txt_field">
+                    <input type="text" name="nameOfIdentityDocument" placeholder=" ">
+                    <span></span>
+                    <label>nazwa_dok_tożsamości</label>
+                </div>
+
+                <div class="txt_field">
+                    <input type="text" name="numberOfIdentityDocument" placeholder=" ">
+                    <span></span>
+                    <label>nr_dok_tożsamości</label>
+                </div>
+            </div>
+
+            <div class="txt_field">
+                <input type="email" name="email"
+                    pattern="[-A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ.0-9]+@([A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ0-9][-A-Za-zżźćńółęąśŻŹĆĄŚĘŁÓŃ0-9]+\.)+[A-z]*" placeholder=" " required>
+                <span></span>
+                <label>e-mail</label>
+            </div>
+
+            <div class="txt_field">
+                <input type="tel" name="phoneNumber" pattern="[0-9]{9}" placeholder=" ">
+                <span></span>
+                <label>nr tel</label>
+            </div>
+
+            <div class="txt_field">
+                <input type="text" name="schoolName" placeholder=" " required>
+                <span></span>
+                <label>szkoła do której uczęszczałeś</label>
+            </div>
+
+            <div class="txt_field">
+                <input type="text" name="locality" placeholder=" " required>
+                <span></span>
+                <label>miejscowosc</label>
+            </div>
+
+            <div class="txt_field major_select">
+                <select name="major1" name="major" placeholder=" " required>
+                    <option value="" disabled selected>Preferowany kierunek</option>
+                </select>
+                <span></span>
+            </div>
+
+            <div class="add_major">
+                <input type="button" class="add_major_button" value="+">
+            </div>
+
+            <input type="submit" value="Wyślij" id="send">
+        </form>
+    </div>
+
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
