@@ -1,5 +1,10 @@
 /** @format */
 
+:root {
+	--main-color: #3296ff;
+	--secondary-color: #8e44ad;
+}
+
 * {
 	box-sizing: border-box;
 	font-family: Helvetica, sans-serif;
@@ -102,6 +107,24 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
+	border-color: #2691d9;
+	transition: 0.5s;
+}
+
+input[type="button"] {
+	background: #2691d9;
+	border-radius: 25px;
+	border: 1px solid;
+	color: #e9f4fb;
+	cursor: pointer;
+	font-size: 18px;
+	font-weight: 700;
+	height: 50px;
+	outline: none;
+	width: 100%;
+}
+
+input[type="button"]:hover {
 	border-color: #2691d9;
 	transition: 0.5s;
 }

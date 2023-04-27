@@ -59,7 +59,8 @@ sendButton.addEventListener("click", () => {
 	})
 		.then((response) => {
 			if (response.ok) {
-				console.log("succes!!!");
+				console.info("data added to the table");
+				window.alert("twoje dane zostały wysłane");
 			} else {
 				return Promise.reject(response);
 			}
