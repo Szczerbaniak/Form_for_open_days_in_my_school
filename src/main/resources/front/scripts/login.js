@@ -30,6 +30,7 @@ loginBtn.addEventListener("click", () => {
 				sessionStorage.setItem("password", givenPassword.value);
 				location.href = "adminPanel.html";
 			} else {
+				window.alert("podałeś niepoprawne dane logowania");
 				return Promise.reject(response);
 			}
 		})
