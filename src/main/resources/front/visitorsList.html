@@ -13,9 +13,9 @@
 <body>
     <nav>
         <ul>
-            <li class="nav"><a href="adminPanel.html">Panel administdacyjny</a></li>
+            <li class="nav"><a href="adminPanel.html">Panel administhacyjny</a></li>
             <li class="nav"><a class="active" href="visitorsList.html">Lista odwiedzających</a></li>
-            <li class="nav"><a href="admins.html">Administdatorzy</a></li>
+            <li class="nav"><a href="admins.html">Administhatorzy</a></li>
             <li class="nav"><a href="analytics.html">Analiza danych</a></li>
             <li class="nav">
                 <a href="#">Konto</a>
@@ -27,28 +27,49 @@
         </ul>
     </nav>
     <main>
-        <table>
+        <table id="visitors">
             <thead>
-                <th>
-                <td>id</td>
-                <td>imie</td>
-                <td>imie</td>
-                <td>drugie imie</td>
-                <td>nazwisko</td>
-                <td>pesel</td>
-                <td>Nazwa dokumentu tożsamości</td>
-                <td>Numer dokumentu tożsamości</td>
-                <td>Email</td>
-                <td>Telefon</td>
-                <td>Szkoła</td>
-                <td>Miejscowość</td>
-                <td>Kierunek</td>
-                <td>Numer wyboru</td>
-
-
-                </th>
+                <tr>
+                    <th>Id</th>
+                    <th>Imie</th>
+                    <th>Drugie imie</th>
+                    <th>Nazwisko</th>
+                    <th>Pesel</th>
+                    <th>Nazwa dokumentu tożsamości</th>
+                    <th>Numer dokumentu tożsamości</th>
+                    <th>Email</th>
+                    <th>Telefon</th>
+                    <th>Szkoła</th>
+                    <th>Miejscowość</th>
+                    <th>Kierunek</th>
+                    <th>Numer wyboru</th>
+                    <th>Akcje</th>
+                </tr>
             </thead>
+            <tbody></tbody>
         </table>
+
+        <template id="row">
+            <tr>
+                <td class="id"></td>
+                <td class="name"></td>
+                <td class="secondName"></td>
+                <td class="surname"></td>
+                <td class="pesel"></td>
+                <td class="nameOfIdentityDocument"></td>
+                <td class="numberOfIdentityDocument"></td>
+                <td class="email"></td>
+                <td class="phoneNumber"></td>
+                <td class="school"></td>
+                <td class="locality"></td>
+                <td class="major"></td>
+                <td class="choiceNumber"></td>
+                <td class="buttons">
+                    <!-- <button class="update">update</button> -->
+                    <button class="delete">delete</button>
+                </td>
+            </tr>
+        </template>
     </main>
     <script src="scripts/displayVisitorsList.js"></script>
 </body>
